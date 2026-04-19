@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#cabeff",
+                        "primary-fixed-dim": "#cabeff",
+                        "surface-dim": "#111317",
+                        "tertiary-container": "#d7791f",
+                        "on-secondary-fixed": "#1c0a55",
+                        "surface-container": "#1e2024",
+                        "outline-variant": "#484555",
+                        "on-primary-fixed": "#1c0062",
+                        "tertiary": "#ffb780",
+                        "primary-container": "#947dff",
+                        "background": "#111317",
+                        "secondary-fixed-dim": "#cabeff",
+                        "surface-container-low": "#1a1c20",
+                        "surface-container-lowest": "#0c0e12",
+                        "primary": "#cabeff",
+                        "error-container": "#93000a",
+                        "surface-tint": "#cabeff",
+                        "on-secondary-container": "#b9abfa",
+                        "on-error": "#690005",
+                        "on-primary": "#31009a",
+                        "inverse-primary": "#603ce2",
+                        "on-background": "#e2e2e8",
+                        "tertiary-fixed": "#ffdcc4",
+                        "surface-bright": "#37393e",
+                        "secondary-container": "#483c83",
+                        "on-secondary-fixed-variant": "#483c83",
+                        "on-tertiary-container": "#442000",
+                        "inverse-on-surface": "#2f3035",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#32246b",
+                        "surface-container-highest": "#333539",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#e6deff",
+                        "surface-container-high": "#282a2e",
+                        "on-primary-fixed-variant": "#4816cb",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "on-surface-variant": "#c9c4d8",
+                        "on-primary-container": "#2a0088",
+                        "outline": "#938ea1",
+                        "on-tertiary": "#4e2600",
+                        "surface": "#111317",
+                        "on-surface": "#e2e2e8",
+                        "primary-fixed": "#e6deff",
+                        "on-tertiary-fixed": "#2f1400",
+                        "surface-variant": "#333539",
+                        "inverse-surface": "#e2e2e8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .luminous-frame {
+            box-shadow: 0 0 60px rgba(202, 190, 255, 0.1);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        @media (min-width: 1024px) {
+            .asymmetric-grid > div:nth-child(even) {
+                transform: translateY(2rem);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-dim text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<nav class="bg-[#111317]/70 backdrop-blur-xl dark:bg-[#111317]/70 font-['Manrope'] font-bold tracking-tight text-lg uppercase docked full-width top-0 sticky z-50 flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#cabeff] text-2xl" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-xl font-extrabold tracking-[-0.02em] text-[#cabeff]">ETHEREAL CURATOR</span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm tracking-widest">
+<a class="text-[#cabeff] font-bold hover:text-[#cabeff] transition-colors duration-300" href="#gallery">GALLERY</a>
+<a class="text-zinc-400 hover:text-[#cabeff] transition-colors duration-300" href="#faq">FAQ</a>
+<a class="text-zinc-400 hover:text-[#cabeff] transition-colors duration-300" href="#">LICENSE</a>
+</div>
+<button class="text-[#cabeff] scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+<!-- Hero Section -->
+<section class="min-h-[707px] flex flex-col justify-center items-start pt-20 pb-32 relative overflow-hidden">
+<div class="absolute top-1/2 right-0 -translate-y-1/2 w-full lg:w-2/3 h-full opacity-30 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-l from-primary/20 to-transparent blur-3xl rounded-full"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-label text-xs uppercase tracking-[0.4em] text-primary mb-6 animate-pulse">Ethereal Digital Masterpieces</p>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+                    감성적 AI 아트,<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-primary-container">당신의 공간을 위해.</span>
+</h1>
+<p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
+                    인공지능의 상상력과 큐레이터의 감각이 만나 탄생한 디지털 작품입니다. 브랜딩, 인테리어, 개인 소장을 위한 최상의 비주얼 경험을 제안합니다.
+                </p>
+<div class="flex flex-wrap gap-6">
+<a class="bg-gradient-to-br from-[#cabeff] to-[#947dff] px-8 py-4 rounded-xl text-on-primary-fixed font-bold text-lg hover:shadow-[0_0_30px_rgba(202,190,255,0.4)] transition-all duration-300" href="#">
+                        작품 문의하기 (Instagram DM)
+                    </a>
+<a class="border border-outline-variant/30 px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low transition-all" href="#gallery">
+                        갤러리 둘러보기
+                    </a>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-24" id="gallery">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<h2 class="font-headline text-4xl font-bold tracking-tight mb-4 uppercase">Curated Gallery</h2>
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<p class="font-body text-on-surface-variant max-w-md text-right">
+                    매달 한정적으로 공개되는 엄선된 AI 작품들입니다. 각 이미지는 독창적인 스토리와 분위기를 담고 있습니다.
+                </p>
+</div>
+<div class="asymmetric-grid">
+<!-- Card 1 -->
+<div class="group surface-container-low rounded-xl overflow-hidden luminous-frame transition-all duration-500 hover:surface-container-high hover:scale-[1.02]">
+<div class="aspect-[3/4] relative overflow-hidden">
+<img alt="AI artwork" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="ethereal portrait of a woman with bioluminescent skin and crystalline jewelry in a soft glowing lavender forest at midnight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF-zAXU62q8BvrNim-xN-nRfgeR1lwmmmGrIr0fQ8xl7iBxarsAEluk-e2sV5PqeYyXH4uo2Bme_KRPMCpEVOVEO-Lbofb4_IYKb47aJ7CvrI3i6Vpasgwr5fTKV6zY69ohHX6vI1IKKi0MVnVLV6mx3j7Oh-d6em24yO9Uy9sqbjMGOi0LgOwFtQJzAQq8O284jhXgpDWP9q5ALtlB85e_0fZLjTO9Pz7H2VyQ-cvsgD_nb97HBDdJDAHv03YcDNgGpbInQd_gEJs"/>
+</div>
+<div class="p-8">
+<span class="text-[10px] tracking-widest text-primary font-bold uppercase mb-2 block">Series 01 / Neo-Classical</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">Luminous Whispers</h3>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:surface-container-high hover:scale-[1.02]">
+<div class="aspect-square relative overflow-hidden">
+<img alt="AI artwork" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="abstract architectural forms with fluid metallic curves reflecting a sunset in deep indigo and violet tones with sharp light highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxzCIANIzrSfunf-jGAbbPZa4nJQq9IfU2k5IuxxA-pDf9PGSwT5YDSyNSG-zIefQAB9m3DfUyCF2vqP-WbjZ6nDrquIpsUUSmER80l7Z9vTuzCSNRC5eH7fFPtcjQwHRZtjHLQYIn1m5VZMHGEgMSDnkr5nNmJvF4R0Kv6YZFHdA5ZFpZBsLytShfBuDn0puha6lbB0LwJlHgRAwkOG29H_ybxQwanEFys5RJ9PGgQI4g3DhdUWlWxUalcvNYH6Qb3-2G2JeXDM_F"/>
+</div>
+<div class="p-8">
+<span class="text-[10px] tracking-widest text-primary font-bold uppercase mb-2 block">Series 02 / Abstract Flow</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">Digital Fluidity</h3>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:surface-container-high hover:scale-[1.02]">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img alt="AI artwork" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="cinematic close up of an iridescent butterfly landing on a glowing purple mushroom in a misty enchanted mossy forest floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChCKTeciH-t-jpRfYGmYwGhIaf-hfu17DFDwGKM5YmcR920N4ywqUBAU2fgj1x0P_h3iS2mk49V46_LrH5rL7c4IUFQKYlSxDN9P8eakvjPTtzYZa5Tn8wt7PwtDsNMFac8Ur7AD7cAU-81mDC-CGmSUiArFCir_4BWN-jCnahQnwFKPEBigyumLtB6LgKe4RYNTlsSv_a3h8ckBu6tQyMVSqvfOdzAsfVbPQpquRXELM7Gc9yvAe57MmKLisBJdZVoIbUML4Eass2"/>
+</div>
+<div class="p-8">
+<span class="text-[10px] tracking-widest text-primary font-bold uppercase mb-2 block">Series 03 / Mystic Nature</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">The Monarch's Dream</h3>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:surface-container-high hover:scale-[1.02]">
+<div class="aspect-[3/4] relative overflow-hidden">
+<img alt="AI artwork" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="minimalist zen garden with glowing geometric sand patterns under a dark starry sky with a giant purple moon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfrkd7Qx_X8BTdTRtumX0JzLz-J6nBta-mg8pLt_ExT0NBl_BVKsLtEjvawbEfAkm-jLWFxfk6-8aYMJX9a-jbOeKODUeiQGzLiYekA_aqLVSAWAE1L_yZ3txaKuyEhZ2mabEoOSI3eFZ2MdSKNFdfNPHA_z3_TDjjq_E7ii75mUjTXwzcSCA7fXi5505muNAZySqds4DLS-62TwouwBJNmOyAmEm-woxJSNsHunyb-9_7P5pawOUnntAwXfGp6pVwrFiBv8_9Jm4H"/>
+</div>
+<div class="p-8">
+<span class="text-[10px] tracking-widest text-primary font-bold uppercase mb-2 block">Series 04 / Zen Minimal</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">Silent Geometry</h3>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:surface-container-high hover:scale-[1.02]">
+<div class="aspect-square relative overflow-hidden">
+<img alt="AI artwork" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="cyberpunk futuristic city street in Tokyo with glowing violet neon signs and reflections on rainy pavement and floating particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQAeS_1WvoPY_TspQ_sh3srVC7XeSpin3tUndjoED77OCsnIxJXwAdCPUDKRmV_G7Fb1eHOt6vO4-FL8jivDN3gS7ko0A7DGerXMG4PRJaZTOZuOLcbEeBdGlbyRg0sC6jlRzx8VFc0F1Y_-s1AHdhSBSVxy_wxuQstcw4ZSn8QgoH9JH4Fy6sorkb4wfZgvPx8BG69bYRMx9CfnhcP40XTr60pUFHuBSyHAgVzNNM1JNuIE8cZaYHHIg6D3JOhfin6XZIyDIVopD8"/>
+</div>
+<div class="p-8">
+<span class="text-[10px] tracking-widest text-primary font-bold uppercase mb-2 block">Series 05 / Urban Night</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">Neon Echoes</h3>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group surface-container-low rounded-xl overflow-hidden luminous-frame transition-all duration-500 hover:surface-container-high hover:scale-[1.02]">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img alt="AI artwork" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="surreal cosmic ocean with waves made of stardust and a distant nebula reflecting in the deep violet water with soft ripples" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7V7uSMG7BJqg8u8xONveXHO0fowhzSrPoM22oR_7oX6o3XbwmkRzgBdbaoRvIF6AiUh60iBhLxA-mPHhR_IRilQyRaaCq5h_jv27MJPP9TYjJX0p00fgQ2vEwlrSgwoYhImeC6y-GdsEQCM_o5Hnj_TlIZrCaYW-SPHL_etEn2JjE7AA65xIkuCWq3xcusQaCxDF9Qc09oNiZHz3h7BUoji5yS1kkCu-tXfCJ0ilzQVPuP74eSd6lrbsHMQ7ik8rGnPJY2s6-Bk1x"/>
+</div>
+<div class="p-8">
+<span class="text-[10px] tracking-widest text-primary font-bold uppercase mb-2 block">Series 06 / Celestial Ocean</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">Ether Waves</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- License Policy Section -->
+<section class="py-24 my-12 relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest/50 rounded-3xl -z-10"></div>
+<div class="flex flex-col items-center text-center px-6 max-w-4xl mx-auto">
+<span class="material-symbols-outlined text-primary text-6xl mb-8" data-icon="verified_user">verified_user</span>
+<h2 class="font-headline text-3xl font-bold mb-6">License &amp; Policy</h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed mb-8">
+                    "모든 작품은 사용 목적(개인 소장, 상업적 광고, 웹사이트 배경 등)에 따라 <span class="text-primary font-bold">라이선스를 개별 협의</span>합니다. 무단 배포 및 2차 가공은 엄격히 금지됩니다."
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<span class="bg-surface-container-highest px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase text-on-surface-variant">Personal Use</span>
+<span class="bg-surface-container-highest px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase text-on-surface-variant">Commercial License</span>
+<span class="bg-surface-container-highest px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase text-on-surface-variant">Exclusive Rights</span>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 max-w-3xl mx-auto" id="faq">
+<h2 class="font-headline text-4xl font-bold tracking-tight mb-16 text-center uppercase">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant/10">
+<button class="w-full flex justify-between items-center p-6 text-left hover:text-primary transition-colors">
+<span class="font-bold text-lg">상업적 이용이 가능한가요?</span>
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/5 pt-4">
+                        네, 가능합니다. 다만 작품별로 상업용 라이선스 비용이 다르게 책정되므로 인스타그램 DM을 통해 구체적인 사용 범위를 말씀해 주시면 안내해 드립니다.
+                    </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant/10">
+<button class="w-full flex justify-between items-center p-6 text-left hover:text-primary transition-colors">
+<span class="font-bold text-lg">기존 작품의 수정이 가능한가요?</span>
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/5 pt-4">
+                        색감 조정이나 간단한 리터칭은 기본적으로 제공됩니다. 형태의 큰 변화를 원하시는 경우 추가 작업 비용이 발생할 수 있습니다.
+                    </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant/10">
+<button class="w-full flex justify-between items-center p-6 text-left hover:text-primary transition-colors">
+<span class="font-bold text-lg">작품 전달 시간은 얼마나 걸리나요?</span>
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/5 pt-4">
+                        결제 완료 후 고해상도 원본 파일은 보통 24시간 이내에 디지털 방식으로 전달됩니다. 맞춤 제작의 경우 협의된 일정에 따라 진행됩니다.
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#111317] dark:bg-[#111317] font-['Inter'] text-xs tracking-widest uppercase full-width py-12 flex flex-col items-center gap-8 px-8 border-t border-white/5 mt-20">
+<div class="font-['Manrope'] font-black text-[#cabeff] text-2xl">ETHEREAL CURATOR</div>
+<div class="flex gap-10 flex-wrap justify-center">
+<a class="text-zinc-500 hover:text-white transition-opacity" href="#gallery">GALLERY</a>
+<a class="text-zinc-500 hover:text-white transition-opacity" href="#">LICENSE</a>
+<a class="text-zinc-500 hover:text-white transition-opacity" href="#faq">FAQ</a>
+<a class="text-zinc-500 hover:text-white transition-opacity" href="#">INSTAGRAM</a>
+</div>
+<p class="text-zinc-500 text-center max-w-md leading-loose opacity-80">
+            © 2024 ETHEREAL CURATOR. AI MASTERPIECES CURATED FOR THE DIGITAL VOYAGE.
+        </p>
+</footer>
+<!-- Fixed CTA & BottomNavBar Logic -->
+<div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+<!-- Bottom Contact Tooltip -->
+<div class="bg-surface-container px-4 py-2 rounded-lg text-xs font-bold text-primary mb-2 shadow-2xl glass-effect border border-primary/20 animate-bounce">
+            Contact for Artwork
+        </div>
+<!-- BottomNavBar (Floating FAB style) -->
+<div class="fixed bottom-8 right-8 flex items-center justify-end">
+<a class="bg-gradient-to-br from-[#cabeff] to-[#947dff] p-5 rounded-full flex items-center justify-center shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:scale-110 hover:shadow-[#cabeff]/20 transition-all duration-300 active:scale-90 group relative" href="#">
+<span class="material-symbols-outlined text-zinc-950 text-3xl" data-icon="chat_bubble">chat_bubble</span>
+<span class="absolute right-full mr-4 bg-primary text-on-primary font-bold px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Instagram DM</span>
+</a>
+</div>
+</div>
+</body></html>
