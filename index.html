@@ -1,1 +1,83 @@
-hello world 1
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="감성적인 AI 아트 작품을 소개하고 인스타그램 DM으로 빠르게 문의할 수 있는 디지털 아트 스토어입니다."
+    />
+    <title>ETHEREAL CURATOR | AI 아트 스토어</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+
+    <header class="site-header">
+      <nav aria-label="주요 내비게이션" class="top-nav">
+        <a class="brand" href="#hero">ETHEREAL CURATOR</a>
+        <div class="nav-links" aria-label="페이지 섹션">
+          <a href="#gallery">GALLERY</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="hero" class="hero-section">
+        <p class="hero-eyebrow">CURATED DIGITAL ART</p>
+        <h1>감성적 AI 아트, 당신의 공간을 위해.</h1>
+        <p class="hero-description">
+          인공지능의 상상력과 큐레이터의 감각이 만나 탄생한 디지털 작품입니다. 브랜딩, 공간 연출,
+          개인 소장을 위한 프리미엄 비주얼을 제안합니다.
+        </p>
+        <div class="hero-cta-group">
+          <a class="cta-primary" data-instagram-link href="#">작품 문의하기 (Instagram DM)</a>
+          <a class="cta-ghost" href="#gallery">작품 둘러보기</a>
+        </div>
+      </section>
+
+      <section id="gallery" class="content-section">
+        <div class="section-head section-head--asymmetric">
+          <h2>CURATED GALLERY</h2>
+          <p>매달 한정 공개되는 AI 작품 컬렉션. 감성과 목적에 맞춰 라이선스 상담을 도와드립니다.</p>
+        </div>
+        <div id="artwork-grid" class="artwork-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="policy" class="content-section policy-section">
+        <h2>License &amp; Policy</h2>
+        <p>
+          모든 작품은 사용 목적(개인 소장, 상업 광고, 웹/브랜드 콘텐츠)에 따라 <strong>라이선스를 개별
+          협의</strong>합니다. 무단 배포 및 2차 가공은 제한되며, 맞춤 범위는 DM 상담으로 빠르게 안내해
+          드립니다.
+        </p>
+        <a class="cta-primary cta-primary--small" data-instagram-link href="#">작품 문의하기 (Instagram DM)</a>
+      </section>
+
+      <section id="faq" class="content-section">
+        <div class="section-head">
+          <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        </div>
+        <div id="faq-list" class="faq-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ETHEREAL CURATOR · AI ART FOR BRANDS &amp; SPACES</p>
+      <a data-instagram-link href="#">작품 문의하기 (Instagram DM)</a>
+    </footer>
+
+    <a class="floating-cta" data-instagram-link href="#" aria-label="인스타그램 DM으로 작품 문의하기">
+      DM
+    </a>
+
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>
